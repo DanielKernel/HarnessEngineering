@@ -1,0 +1,2 @@
+[console_scripts]
+harness = harness_engineering.cli:main
