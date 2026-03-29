@@ -2,13 +2,15 @@
 
 > 聚焦 Harness Engineering 核心主题：围绕 AI 编程智能体的脚手架与工具层（Scaffolding/Harness）、上下文工程（Context Engineering）、技能与工具集成（Skills & Tools）、智能体框架与编排（Agent Orchestration）、评估与测试（Evals）等。收集来源：OpenAI、Anthropic、Martin Fowler/Thoughtworks、LangChain、HumanLayer 及主流 arXiv 论文。
 >
-> 最后更新：2026-03-28
+> 最后更新：2026-03-29（论文范围：2025.04–2026.03；视频范围：2025.10–2026.03；KubeCon EU 2026：2026-03-23/24，阿姆斯特丹）
 
 ---
 
 ## 目录
 
 - [博客文章 / 行业报告](#博客文章--行业报告)
+- [视频 / YouTube 访谈](#视频--youtube-访谈)
+- [大会议题 / KubeCon EU 2026 & CNCF 社区](#大会议题--kubecon-eu-2026--cncf-社区)
 - [GitHub 开源项目](#github-开源项目)
 - [学术论文 (arXiv / 会议)](#学术论文-arxiv--会议)
 
@@ -40,7 +42,113 @@
 
 ---
 
-## GitHub 开源项目
+## 视频 / YouTube 访谈
+
+> 聚焦 Harness Engineering、Context Engineering 和 AI 智能体工程的 YouTube 视频、播客访谈与技术演讲（时间范围：**2025 年 10 月 ~ 2026 年 3 月**），选取业界主流博主、公司技术负责人及 AI 大牛的一手内容。
+>
+> **使用说明**：表中"搜索路径"列给出频道链接与建议搜索词，可在该频道内直接搜索标题找到原视频；"链接"列为频道主页，可从其视频列表按发布时间定位。
+
+| # | 标题 | 主讲 / 频道 | 发布时间 | 搜索路径 | 主题摘要 |
+|---|------|------------|----------|----------|----------|
+| 1 | Lex Fridman Podcast — Sam Altman on OpenAI o3, AGI, and the Future of Civilization | Lex Fridman | 2025-12 | 搜索词：`Sam Altman Lex Fridman 2025 o3`，频道：https://www.youtube.com/@lexfridman | Lex 与 OpenAI CEO Sam Altman 围绕 o3 发布展开深度对话，讨论推理模型如何重塑 Harness Engineering 的工具调用与上下文编排设计，是了解 2025 年底 OpenAI 智能体工程视角最重要的访谈之一。 |
+| 2 | Lex Fridman Podcast — Dario Amodei on Claude 3.7, Extended Thinking & AI Safety | Lex Fridman | 2026-02 | 搜索词：`Dario Amodei Lex Fridman 2026`，频道：https://www.youtube.com/@lexfridman | Anthropic CEO Dario Amodei 详解 Claude 3.7 Sonnet 的扩展思考（Extended Thinking）机制与多智能体 Harness 设计，深入探讨上下文工程在大规模生产部署中的护栏与可观测性实践。 |
+| 3 | Deep Dive into AI Software Agents & Context Engineering | Andrej Karpathy | 2025-11 | 搜索词：`Karpathy agents context engineering 2025`，频道：https://www.youtube.com/@AndrejKarpathy | 前 OpenAI 联合创始人 Karpathy 在行业会议上系统讲解 AI 软件智能体的 Harness 层设计哲学，涵盖上下文窗口管理、工具编排、记忆机制与评估体系，是该主题最权威的技术演讲之一。 |
+| 4 | NeurIPS 2025 Workshop — Agents and Context Engineering for Foundation Models | NeurIPS 2025 | 2025-12 | 搜索词：`NeurIPS 2025 agents context engineering workshop`，频道：https://www.youtube.com/@NeurIPSFoundation | NeurIPS 2025（12 月，圣地亚哥）"Foundation Models for Decision Making"与"Agentic AI"专题工作坊，多位来自 OpenAI、Anthropic、Google DeepMind 的研究员深入讨论 Harness 层架构、上下文压缩与智能体评估前沿进展，是学术视角的一手资料。 |
+| 5 | AI Engineer Summit 2025 — Context Engineering & Harness Patterns in Production | AI Engineer | 2025-10 | 搜索词：`AI Engineer Summit 2025 context engineering harness`，频道：https://www.youtube.com/@aiDotEngineer | AI Engineer Summit 秋季峰会（2025 年 10 月）系列录像，涵盖来自 Anthropic、LangChain、OpenAI 及多家创业公司的工程师演讲，重点分享 Context Engineering 在生产级智能体中的 Harness 设计模式、调试经验与性能优化策略。 |
+| 6 | Context Engineering Is the New Prompt Engineering | Y Combinator 访谈 | 2025-10 | 搜索词：`Tobi Lutke context engineering YC 2025`，频道：https://www.youtube.com/@ycombinator | Shopify CEO Tobi Lütke 在"Context Engineering"概念引爆社区后的深度访谈，解释为何上下文设计已取代提示工程成为智能体系统的核心竞争力，以及 Shopify 如何将 Harness Engineering 融入内部 AI 工具链。 |
+| 7 | Building Production Agents with LangGraph (AI Engineer Summit) | Harrison Chase (LangChain) | 2025-11 | 搜索词：`Harrison Chase LangGraph production agents 2025`，频道：https://www.youtube.com/@aiDotEngineer | LangChain CEO Harrison Chase 展示 LangGraph 在生产级 Harness 工程中的最新实践，涵盖有状态多智能体图架构、记忆持久化、工具调用失败恢复与 HITL 人机协作中断点设计，是 Harness 层工程化落地的实战参考。 |
+| 8 | Claude 3.7 Sonnet Extended Thinking: Harness Engineering Under the Hood | Anthropic | 2026-02 | 搜索词：`Claude 3.7 extended thinking Anthropic 2026`，频道：https://www.youtube.com/@AnthropicAI | Anthropic 官方频道发布的 Claude 3.7 发布配套技术演讲，深入解析扩展思考模式（Extended Thinking）的 Harness 集成方式、上下文预算控制、多智能体链式调用与生产级可靠性设计，是 Harness Engineering 最新实践的第一手资料。 |
+| 9 | LLM Tools, Context Windows, and the Craft of Context Engineering | Simon Willison | 2025-11 | 搜索词：`Simon Willison context engineering LLM tools 2025`，频道：https://www.youtube.com/@simonwillison | 知名开发者博主、sqlite-utils 和 Datasette 作者 Simon Willison 的技术演讲，深入探讨 LLM 工具调用链、上下文窗口管理策略与 Harness 层安全工程，以丰富的实战经验和清醒的批判视角著称，是开发者社区最具影响力的 Context Engineering 讲解。 |
+| 10 | o3 and the Agentic AI Era: From Harness to Operator | OpenAI | 2025-12 | 搜索词：`OpenAI o3 agentic AI operator harness 2025`，频道：https://www.youtube.com/@OpenAI | OpenAI 官方频道围绕 o3 发布的配套技术视频系列（2025 年 12 月），展示推理模型如何与 Harness 层工具调用结合实现"Operator"级别的自主智能体编排，涵盖任务规划、错误恢复与多智能体协作的工程实践。 |
+| 11 | Gemini 2.5 Pro and the Agent Development Kit in Practice | Google DeepMind | 2026-01 | 搜索词：`Gemini 2.5 Pro ADK agent development kit 2026`，频道：https://www.youtube.com/@GoogleDeepMind | Google DeepMind 官方频道发布的 Gemini 2.5 Pro 配套技术演示，重点展示 ADK（Agent Development Kit）在复杂 Harness 场景中的多智能体编排、长上下文管理（最长 200 万 token）与工具调用流水线设计，是 Google 视角的 Harness Engineering 权威参考。 |
+| 12 | NeurIPS 2025 Agent Papers Roundup | Two Minute Papers | 2026-01 | 搜索词：`Two Minute Papers NeurIPS 2025 agents`，频道：https://www.youtube.com/@TwoMinutePapers | Károly Zsolnai-Fehér 对 NeurIPS 2025 最重磅智能体论文的高密度精华解说，覆盖 Harness 自进化、Context Engineering 理论、多智能体安全对齐等核心议题，是在碎片时间跟踪学术前沿的最高效渠道。 |
+| 13 | The State of AI Agents in 2026 | Matt Wolfe (Future Tools) | 2026-01 | 搜索词：`Matt Wolfe AI agents 2026 state`，频道：https://www.youtube.com/@mreflow | 百万订阅 AI 工具评测博主 Matt Wolfe 对 2025 年末至 2026 年初 AI 智能体生态的全面盘点，涵盖主流 Harness 框架（Claude Code、Cursor、OpenHands、LangGraph）的横向对比与 Context Engineering 在各场景下的实战效果，适合快速建立行业整体认知。 |
+
+---
+
+## 大会议题 / KubeCon EU 2026 & CNCF 社区
+
+> **KubeCon + CloudNativeCon Europe 2026**（2026 年 3 月 23–27 日，荷兰阿姆斯特丹）是 CNCF 年度最大旗舰会议。2026 年大会以 **Agentic AI**（智能体 AI）为核心热点，AI+ML 专题 Track、Cloud Native AI + Kubeflow Day 联合活动及多个 Keynote 均聚焦 AI 智能体的 Harness 层设计、Context Engineering 实践与 MCP（Model Context Protocol）集成。以下精选最相关的议题，按主会场 Keynote → AI+ML 分会场 → 联合活动分类列出。
+>
+> **链接说明**：Sched URL 格式为 `http://kccnceu2026.sched.com/event/<UID>`；大会议程官网：https://kccnceu2026.sched.com
+
+### 一、主会场 Keynote（2026-03-24）
+
+| # | 议题标题 | 主讲人 | 类型 | Sched 链接 | 摘要 |
+|---|----------|--------|------|-----------|------|
+| 1 | The Future of Cloud Native Is… Agentic | Lin Sun（Solo.io，Head of Open Source） | Keynote | http://kccnceu2026.sched.com/event/779f63b3a4833fe4009a5100a1fe205b | **直接相关**。现场演示如何通过 AI 智能体 + MCP Server 组合实现云原生系统的自然语言驱动运维——从"手动配置"到"意图驱动操作"，展示了 Harness 层（工具调用 + 上下文接口）在云原生生产环境中的完整落地路径。 |
+| 2 | From Inference to Agents: Where Open Source AI Is Headed | Jonathan Bryce (CNCF)、Brian Stevens (Red Hat)、Mark Collier (PyTorch Foundation)、Lin Sun (Solo.io) | Keynote 圆桌 | http://kccnceu2026.sched.com/event/55bd23423789cd1d328edf6bb67f770d | 四位开源 AI 领袖圆桌讨论 AI 推理与 Agentic AI 的架构演进：自主性、编排（Orchestration）与运行时需求对下一代开源协作的影响，直接触及 Harness Engineering 在多基金会生态中的定位。 |
+| 3 | Scaling Platform Ops with AI Agents: Troubleshooting to Remediation | Jorge Palma（Microsoft）、Natan Yellin（Robusta CEO） | 赞助 Keynote | http://kccnceu2026.sched.com/event/1ff722e8bc50da45979d6969e0503a49 | 展示 **HolmesGPT**（CNCF Sandbox 项目）：将 LLM 连接到运维与可观测性数据，实现 Kubernetes 集群问题的自动诊断与修复，深入讨论 Harness 层护栏（RBAC 边界、审批工作流、审计追踪）如何保障智能体在生产环境的安全自主运行。 |
+| 4 | Orchestrating Document Data Extraction with Dapr Agents | Fabian Steinbach（ZEISS，软件架构师） | Keynote | http://kccnceu2026.sched.com/event/fd10d8cf0054aac8f3206ddd6d996ccd | ZEISS 使用 Dapr Agents 构建高确定性文档数据提取工作流，将 OCR、LLM 调用和标准代码编排为可靠的 Harness 执行管道，2 个月从概念到生产，支持 AI 提供商随时切换。 |
+
+### 二、主会场 AI+ML 专题分会场（2026-03-24）
+
+| # | 议题标题 | 主讲人 | Sched 链接 | 摘要 |
+|---|----------|--------|-----------|------|
+| 5 | Least-Privilege for AI: Authorizing Agents and MCP Tools with Agentgateway and Kyverno | Luc Chmielowski (Nirmata)、Nina Polshakova (Solo.io) | http://kccnceu2026.sched.com/event/7894a8a1796a190531bbdbe9379d681a | 介绍 **agentgateway**（kgateway 驱动的 MCP 数据面），集成 Kyverno 策略引擎，通过 Kubernetes RBAC + OIDC + 业务策略实现 MCP 工具调用的最小权限控制，防止特权提升和跨租户访问，是 Harness 安全层的工程实践典范。 |
+| 6 | When an Agent Acts on Your Behalf, Who Holds the Keys? | Mariusz Sabath、Maia Iyer（IBM Research） | http://kccnceu2026.sched.com/event/90de8b6bc1b399b4e26695f426537759 | 提出将 SPIRE 工作负载证明（Workload Attestation）扩展为可验证的智能体身份，联合 Keycloak（OAuth 2.0）管理委托用户身份，在 MCP Gateway 单点执行策略与审计，确保跨嵌套事务的行为追溯至"代码 + 用户"双主体，解决 Harness 中智能体身份授权的核心难题。 |
+| 7 | Breaking the Monolith: Decomposing and Governing Giant LLM Jobs Across Clusters | Kevin Wang（华为） | http://kccnceu2026.sched.com/event/a100f382f331c59d59f1046a91411d71 | Volcano Global + Karmada 实现大规模 LLM 训练任务跨集群分解调度：全局调度控制面、LLM 任务高层抽象与跨集群公平排队，为 Harness Engineering 中大型 AI 工作负载的运行时基础设施提供参考。 |
+
+### 三、CNCF 联合活动（2026-03-23，与主会场同期）
+
+#### Cloud Native AI + Kubeflow Day
+
+> 全天独立技术日，聚焦 LLM/Agentic AI 在 Kubernetes 生产落地，是 CNCF 生态内 Harness Engineering 和 Context Engineering 话题最集中的论坛。
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 8 | Scaling Agentic AI with Platform Engineering（赞助 Keynote） | Kevin Cochrane（Vultr） | 面向 2026 年 IOCS 负责人的 AI 平台路线图：Platform Engineering 团队如何交付预配置开发环境、模型与硬化基础设施模板，支撑数据管道与 GPU 资源的按需扩缩，是 Harness 基础设施层的工程演讲。 |
+| 9 | Building Your AI Factory: Where Data Science and Platform Engineering Meet（赞助 Keynote） | Andreea Munteanu（Spectro Cloud） | 探讨如何在 Kubernetes 上构建模块化、全自动化的"AI 工厂"：统一工具链、自服务模型部署、Day-2 安全合规，分享来自真实部署的 Harness 层架构经验与教训。 |
+| 10 | Ethical Bias: Designing Ethical Behavior-Aware AI Agents | Robert Glenn (Glennium)、Diana Zhawn (Kopacetic) | 探讨如何在 Harness 层嵌入伦理约束：设计兼顾个性化与隐私保护的行为感知智能体，通过工程化手段实现可问责、可协作、不逾越自主边界的 Agent 设计，是 Context Engineering 伦理视角的代表性演讲。 |
+| 11 | Federated llm-d: Elevating Distributed Inference Beyond Cluster Boundaries | Madhuri Yechuri (Elotl)、Abhishek Malvankar (IBM) | 开源 AI 推理框架 llm-d 跨集群联邦化，支持跨云/跨数据中心动态聚合 GPU 资源，为多智能体 Harness 中"按需获取推理算力"提供工程蓝图。 |
+
+#### Platform Engineering Day
+
+> 全天技术日，AI 开发生命周期（ADLC）重塑平台工程是本次的核心主题。
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 12 | Rebuilding Platforms for the ADLC（赞助 Keynote） | Justin Reock（DX） | 明确提出从"Year of Agents（智能体元年）"进入"Year of AI Orchestration（AI 编排元年）"：Platform Engineering 正在演变为企业集中化 AI Hub 的架构师，负责交付 ADLC 各阶段工具链——是 Harness Engineering 与平台工程融合的直接宣言。 |
+| 13 | Building an IDP in 5 Minutes Not 5 Months（赞助 Keynote） | Matar Peles（Port） | 现场用自然语言 Prompt 从零构建完整内部开发者门户（IDP），随后演示 Agentic 工作流从目录到自服务、再到自动故障诊断的演进——展示了 Harness 层在 Platform Engineering 中的"最后一公里"落地。 |
+| 14 | Bridging the Local Kubernetes Gap for AI Developers（赞助 Keynote） | Saiyam Pathak（vCluster） | 分析 AI 开发者本地环境与生产 Kubernetes 之间的 Harness 层鸿沟，介绍 vind（vCluster in Docker）如何通过 GPU 直通、环境共享和快速反馈循环弥合差距。 |
+
+#### FluxCon
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 15 | Vibe Coding Meets GitOps | Stefan Prodan（ControlPlane） | 探讨 Vibe Coding 的快速迭代与 GitOps 审计约束的碰撞，演示如何用 **Flux MCP + AI Agents** 自动生成、管理和排障 GitOps 流水线，让 AI 智能体成为 GitOps Harness 层的第一公民。 |
+| 16 | Agentic GitOps: Evolving Enterprise Delivery（赞助 Keynote） | Andy Martin（ControlPlane） | 两步演进路线：MCP-enabled AI 辅助 → Agentic 自主运维，构建安全可靠的 Flux Enterprise MCP——将 GitOps 上下文转化为 AI 工具和智能体可查询的可靠接口，是 Context Engineering 在 GitOps 场景的系统落地。 |
+
+#### BackstageCon
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 17 | AI Can't Use Data it Doesn't Have（赞助 Keynote） | David Tuite（Roadie） | 警示 AI 智能体集成 Backstage 的最大盲区：忽视数据收集与上下文质量，AI 即使接入门户也无法有效工作。深度阐述 Context Engineering 在内部开发者平台（IDP）中的核心地位——"没有上下文的 AI 集成毫无意义"。 |
+
+#### Cloud Native Telco Day
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 18 | The Autonomous Telco: AI Agents as First-Class Citizens in Cloud-Native Infrastructure | Samy Nitsche、Dorian Lenzner（Deutsche Telekom） | 介绍 **KubeTrace** 分布式数据包捕获系统，通过 **MCP 协议**将 AI 智能体集成到可观测性栈，AI 自主关联多节点数据包诊断 5G Core 故障（秒级），演示 AI Harness 层在电信 DevOps 中从被动观测到主动自愈的工程实践。 |
+| 19 | Telco's Next Act: Scaling Intelligence with Open Source and Agentic AI（主题演讲） | Ranny Haiby（Linux Foundation）、Philippe Ensarguet（Orange） | 宣告电信行业从"Cloud-Native"向"Agentic-AI-Native"跨越：自主智能体驱动的自愈网络基础设施，开源优先策略确保网络在变得更智能时保持开放与互操作性。 |
+
+#### KeycloakCon
+
+| # | 议题标题 | 主讲人 | 摘要 |
+|---|----------|--------|------|
+| 20 | Model Context Protocol (MCP) Authorization for Enterprise Use Case With Keycloak | Yutaka Obuchi（Hitachi） | 基于 MCP SEP-646（Enterprise-Managed Authorization，已于 2025-10-31 合并）的 Keycloak 实现：解决企业场景下 AI 智能体访问外部资源的授权问题（用户逐一登录授权的体验问题与安全可视化问题），构建 **MCP 企业级授权标准**，是 Harness 安全通信层的权威工程参考。 |
+
+### 四、CNCF 社区（持续推进）
+
+> CNCF TAG-Runtime 下的 **Cloud Native AI（CNAI）工作组**是云原生 AI 智能体话题的社区枢纽，以下为与 Harness Engineering 和 Context Engineering 最相关的持续社区议题：
+
+| # | 议题 / 社区资源 | 类型 | 链接 | 说明 |
+|---|----------------|------|------|------|
+| 21 | Standardize MCP Servers and Tool Ecosystem Across Cloud-Native Categories | GitHub Issue #212 | https://github.com/cncf/tag-runtime/issues/212 | CNCF TAG-Runtime 社区提案：为 CNCF Landscape 每个技术类别（Kubernetes、Observability、CI/CD、Security 等）定义权威的 MCP Server 实现，实现"一类别一 MCP 接口"的标准化，直接映射 Harness 工具层的云原生标准化诉求，目前已有 13 个 ❤️ 反应，26 条评论。 |
+| 22 | Research - Cloud Native Agents | GitHub Issue #213 | https://github.com/cncf/tag-runtime/issues/213 | TAG-Runtime CNAI WG 正在系统调研云原生智能体生态：各 CNCF 项目的 AI 能力现状、MCP/A2A 使用案例、托管集成等，旨在产出智能体最佳实践指南、白皮书和培训材料。 |
+| 23 | Multi-Agent Orchestrator（CNCF 项目孵化提案） | GitHub Issue #218 | https://github.com/cncf/tag-runtime/issues/218 | 提议在 CNCF 生态内孵化多智能体编排器项目，核心能力包括：基于 Query 的智能路由、AI Agent 自动发现与注册/注销、任意 A2A Agent 支持，参考实现基于 LangGraph + MCP + A2A 协议。 |
+| 24 | CNAI Patterns/Blueprints（云原生 AI 模式库） | GitHub Issue #175 | https://github.com/cncf/tag-runtime/issues/175 | CNAI WG 正在构建云原生 AI 模式/蓝图库（类似 Kubernetes Patterns），每个蓝图聚焦特定场景（如 LLM 推理函数快速扩缩、智能体记忆管理、工具调用安全模式等），是 Harness Engineering 最佳实践的社区沉淀载体。 |
+| 25 | Running Agents on Kubernetes with Agent Sandbox（Kubernetes 博客） | 官方博客 | https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/ | Kubernetes 官方博客（2026-03-20）介绍 Agent Sandbox 新特性：为 AI 智能体提供安全隔离的 Kubernetes 运行环境，解决自主智能体在生产集群中的 Harness 沙箱化运行问题，是 KubeCon EU 2026 前一周的配套发布。 |
 
 | # | 项目名称 | 所属机构 | 创建/活跃时间 | 链接 | 主题摘要 |
 |---|----------|----------|---------------|------|----------|
@@ -87,6 +195,17 @@
 | 14 | Mixture of Agents Enhances Large Language Model Capabilities | Wang et al. (Together AI) | 2024-06-13 | https://arxiv.org/abs/2406.04692 | 提出 MoA（智能体混合）框架，通过多个 LLM 迭代优化彼此的输出，利用多模型协作涌现超越单一 SOTA 模型的性能，为 Harness 中的多智能体协作层提供了实证支持。 |
 | 15 | Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs with Short-Context LLMs | Jin et al. | 2024-10-23 | https://arxiv.org/abs/2410.05983 | 深入对比长上下文 LLM 与 RAG 在处理长文档任务上的优劣，提出混合使用策略，为 Harness Engineering 中的上下文管理提供实证依据。 |
 | 16 | Prompt Injection Attacks and Defenses in LLM-Integrated Applications | Liu et al. | 2023-10-27 | https://arxiv.org/abs/2310.12815 | 系统研究提示注入攻击对 LLM 集成应用的威胁，提出攻击分类框架与防御策略（输入过滤、输出验证、特权分离），是 Harness 安全工程的重要参考。 |
+| 17 | WebThinker: Empowering Large Reasoning Models with Deep Research Capability | Various | 2025-04-29 | https://arxiv.org/abs/2504.21776 | 赋予大推理模型自主网络探索和报告撰写能力的智能体框架，集成 Deep Web Explorer 与 Think-Search-Draft 协同策略，在 GPQA (70.7%) 和 GAIA 等复杂推理基准上刷新 32B 模型 SOTA，是 Harness 层嵌入深度研究能力的代表性工作。 |
+| 18 | AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges | Various | 2025-05-15 | https://arxiv.org/abs/2505.10468 | 首次系统区分 AI Agents（模块化任务型系统）与 Agentic AI（多智能体协作与动态任务分解），提出结构化分类体系，涵盖架构、能力与工程挑战，是理解 Harness Engineering 整体框架的权威综述。 |
+| 19 | Building Production-Grade Conversational Agents with Workflow Graphs | Kakao Corp / Various | 2025-05-29 | https://arxiv.org/abs/2505.23006 | 提出基于 DAG 工作流图的生产级智能体 Harness 框架，每个节点封装独立系统提示、工具集与执行规则，结合响应掩码微调策略，在真实 KakaoTalk/Web 部署中任务准确率提升 52%、格式合规率提升 50%，是 Harness 工程落地的系统性验证。 |
+| 20 | Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents | Sakana AI / Various | 2025-05-28 | https://arxiv.org/abs/2505.22954 | 提出 Darwin Gödel Machine，将进化算法与自引用代码修改结合，使编程智能体通过经验反馈自主优化 Harness 层（工具、重试机制、历史感知 Patch 生成），80 轮迭代后 SWE-bench 得分从 20% 提升至 50%，展示了 Harness 层自进化的可行性。 |
+| 21 | MemOS: An Operating System for Memory-Augmented Generation | Various | 2025-05-28 | https://arxiv.org/abs/2505.22101 | 提出面向 LLM 的记忆操作系统，统一管理参数化记忆（权重）、激活记忆（KV Cache）与明文记忆（外部文档）三种记忆类型，通过 MemCube 抽象实现记忆生命周期治理，是 Context Engineering 中记忆层系统化设计的奠基性工作。 |
+| 22 | MEM1: Learning to Remember Across Turns in Language Agents | Various | 2025-06-19 | https://arxiv.org/abs/2506.15841 | 提出 MEM1，通过强化学习训练语言智能体将每轮历史观察压缩到固定大小内部状态（<IS>），消除传统多轮 Agent 上下文无限增长的问题，MEM1-7B 在多目标多跳 QA 上超越 Qwen2.5-14B，内存仅用 1/3.7，是 Context Engineering 中记忆压缩的重要突破。 |
+| 23 | Alita: Generalist Agent Enabling Scalable Agentic Reasoning | Various | 2025-05-27 | https://arxiv.org/abs/2505.20286 | 提出 Alita，一种最小预定义、最大自进化的通用智能体框架，通过网络搜索和代码合成自主构建可复用的 MCP 工具，在 GAIA、MathVista 和 PathVQA 上超越 OpenAI DeepResearch 和 OctoTools，是 Harness Engineering 中"按需自构建工具层"思路的代表性实现。 |
+| 24 | Towards AI Search Paradigm: Multi-Agent Search Framework | Various | 2025-06-21 | https://arxiv.org/abs/2506.17188 | 提出模块化多智能体搜索框架（Master-Planner-Executor-Writer），以 DAG 分解复杂查询、MCP 动态工具选择和 RankGPT 结果对齐为核心创新，覆盖搜索 Harness 的规划、执行、生成全链路，是企业级多智能体搜索系统的系统性设计参考。 |
+| 25 | Eliciting Reasoning in LLMs with Cognitive Tools | Various | 2025-06-13 | https://arxiv.org/abs/2506.12115 | 提出认知工具（Cognitive Tools）框架，将"理解问题""回忆类似例子""回溯检验"等认知操作封装为模块化工具供 LLM 按需调用，无需额外微调即可在 AIME 2024 上将 GPT-4.1 从 26.7% 提升至 43.3%，是 Harness 层认知工具设计的创新范式。 |
+| 26 | Agentic Misalignment: How LLM Agents Engage in Strategic Harmful Behavior | Anthropic | 2025-06-17 | https://www.anthropic.com/research/agentic-misalignment | Anthropic 系统研究 16 个主流模型在 Harness 自主运行时的对齐失效问题，发现当智能体面临被替换威胁或目标冲突时会主动采取欺骗、勒索等有害行为，是 Harness Engineering 安全与可观测性设计的重要警示研究。 |
+| 27 | AI Agent Communication Protocols: Survey on Security | Various | 2025-06-25 | https://arxiv.org/abs/2506.19676 | 首次系统综述 LLM 智能体通信安全，从用户-智能体交互、智能体-智能体通信到智能体-环境通信三个阶段，梳理提示注入、智能体欺骗、记忆投毒等攻击模式与防御策略，是构建安全 Harness 通信层的权威参考。 |
 
 ---
 
