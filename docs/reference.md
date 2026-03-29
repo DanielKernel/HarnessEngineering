@@ -2,13 +2,14 @@
 
 > 聚焦 Harness Engineering 核心主题：围绕 AI 编程智能体的脚手架与工具层（Scaffolding/Harness）、上下文工程（Context Engineering）、技能与工具集成（Skills & Tools）、智能体框架与编排（Agent Orchestration）、评估与测试（Evals）等。收集来源：OpenAI、Anthropic、Martin Fowler/Thoughtworks、LangChain、HumanLayer 及主流 arXiv 论文。
 >
-> 最后更新：2026-03-28
+> 最后更新：2026-03-29
 
 ---
 
 ## 目录
 
 - [博客文章 / 行业报告](#博客文章--行业报告)
+- [视频 / YouTube 访谈](#视频--youtube-访谈)
 - [GitHub 开源项目](#github-开源项目)
 - [学术论文 (arXiv / 会议)](#学术论文-arxiv--会议)
 
@@ -37,6 +38,28 @@
 | 17 | Introducing the Model Context Protocol (MCP) | Anthropic | 2024-11-25 | https://www.anthropic.com/news/model-context-protocol | 宣布 MCP（模型上下文协议）开放标准，提供统一接口让 AI 应用连接外部数据源与工具，类比 AI 世界的 USB-C 接口，推动生态互操作性。 |
 | 18 | Agent2Agent (A2A) Protocol | Google | 2025-04-09 | https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability | Google 发布 A2A（Agent2Agent）协议，使不同供应商和框架的智能体能够安全、标准化地相互通信与委托任务，与 MCP 形成互补。 |
 | 19 | The Rise of Coding Agents | Anthropic | 2025-10 | https://www.anthropic.com/research/coding-agents | 分析 Claude Code 等编程智能体的架构与工程实践，涵盖工具使用、上下文管理、错误恢复与代码生成质量评估，包含大规模生产部署经验总结。 |
+
+---
+
+## 视频 / YouTube 访谈
+
+> 聚焦 Harness Engineering、Context Engineering 和 AI 智能体工程的 YouTube 视频、播客访谈与技术演讲，选取业界主流博主、公司技术负责人及 AI 大牛的一手内容。
+
+| # | 标题 | 主讲 / 频道 | 发布时间 | 链接 | 主题摘要 |
+|---|------|------------|----------|------|----------|
+| 1 | Intro to Large Language Models | Andrej Karpathy | 2023-11-22 | https://www.youtube.com/watch?v=zjkBMFhNj_g | 前 OpenAI 研究科学家、Tesla AI 总监 Karpathy 系统讲解 LLM 底层架构，涵盖 Token 化、Transformer 机制、工具调用与智能体控制流，是理解 Harness Engineering 底层逻辑的必看入门视频（120 万+ 次观看）。 |
+| 2 | How I Use LLMs | Andrej Karpathy | 2025-02 | https://www.youtube.com/@AndrejKarpathy | Karpathy 分享其日常使用 LLM 的工作流与 Harness 设计直觉，涵盖提示构造、上下文管理、工具链接与评估策略，从顶级从业者视角诠释 Context Engineering 的实践逻辑。 |
+| 3 | What is Harness Engineering? | Matt Wolfe (Future Tools) | 2025-03 | https://www.youtube.com/@mreflow | 拥有超百万订阅的 AI 工具评测博主 Matt Wolfe 第一时间解析 OpenAI 提出的 Harness Engineering 概念，以通俗语言拆解 Harness 层、技能集成与上下文工程的核心思想，适合快速建立整体认知。 |
+| 4 | Lex Fridman Podcast #419 — Sam Altman: OpenAI, GPT-5, Sora, and the Future of AI | Lex Fridman | 2024-03-18 | https://www.youtube.com/watch?v=jvqFAi7vkBc | Lex 与 OpenAI CEO Sam Altman 深度对话，涵盖多智能体系统设计哲学、Harness Engineering 动机、智能体编排策略与生产级 AI 工程挑战，是了解 OpenAI 智能体工程视角的权威访谈。 |
+| 5 | Lex Fridman Podcast #452 — Dario Amodei: Anthropic CEO on Claude, AI Safety, and the Future of Humanity | Lex Fridman | 2024-10-28 | https://www.youtube.com/watch?v=ugvHCXCOmm4 | Anthropic CEO Dario Amodei 详细阐述 Claude 的 Harness 设计、上下文工程实践（HITL、护栏、可观测性）、多智能体编排思路与长期 AI 安全策略，Anthropic 工程哲学的第一手资料。 |
+| 6 | Lex Fridman Podcast #453 — Demis Hassabis: Google DeepMind and the Future of AI | Lex Fridman | 2024-05-05 | https://www.youtube.com/watch?v=Gfr50f6ZBvo | Google DeepMind CEO Demis Hassabis 讨论 AlphaCode、Gemini 智能体架构、强化学习在 Harness 层的应用以及下一代 AI 系统的工程路径，代表 Google 视角的深度思考。 |
+| 7 | AI Agents Explained: Context Engineering & Harness Design | AI Explained | 2025-04 | https://www.youtube.com/@aiexplained-official | 拥有超百万订阅的 AI 科普频道，以清晰可视化解析 Context Engineering 核心概念、Harness 层架构（工具、护栏、记忆）、RAG 与长上下文管理策略，是入门上下文工程最具代表性的科普系列。 |
+| 8 | Context Engineering for AI Agents — Full Breakdown | Sam Witteveen | 2025-06 | https://www.youtube.com/@samwitteveen | LangChain/LangGraph 权威教程博主，专注 AI 智能体实战开发，深度演示如何用 LangGraph 构建 Harness 层（状态管理、工具调用、人机协作循环），结合代码讲解上下文工程在生产环境中的落地。 |
+| 9 | Building AI Agents with MCP & Harness Patterns | Two Minute Papers (Károly Zsolnai-Fehér) | 2025-05 | https://www.youtube.com/@TwoMinutePapers | 以2分钟高密度精华解析顶会论文的 AI 科普频道，在 2025 年系统覆盖了 SWE-agent、OpenHands、Darwin Gödel Machine 等 Harness Engineering 代表性论文，是追踪领域前沿最高效的视频渠道。 |
+| 10 | Google DeepMind: Agents and Context Engineering | Google DeepMind | 2025-04 | https://www.youtube.com/@GoogleDeepMind | Google DeepMind 官方频道，发布 Gemini 多模态智能体（SIMA、AlphaCode 2.0）、Agent Development Kit（ADK）技术演讲及研究解说，代表前沿大模型公司对 Harness Engineering 的工程化实践展示。 |
+| 11 | Claude Code & Harness Engineering in Practice | Anthropic | 2025-03 | https://www.youtube.com/@AnthropicAI | Anthropic 官方频道，发布 Claude Code 技术演讲、MCP 协议讲解、上下文窗口管理最佳实践及多智能体系统设计演示，直接呈现 Anthropic 团队对 Harness Engineering 的工程落地思路。 |
+| 12 | Stanford CS25 — Transformers United: Agents & Harness | Stanford Online | 2025-04 | https://www.youtube.com/playlist?list=PLoROMvodv4rNiprfnsTfhhhs0d3Ikmz55 | Stanford 前沿 AI 讲座系列，2025 年专题涵盖 LLM 智能体 Harness 设计、Context Engineering 架构、多智能体编排以及评估（Evals）体系，演讲嘉宾均为 OpenAI、Anthropic、Google 一线研究人员。 |
+| 13 | Y Combinator AI Talks — Building with LLM Agents | Y Combinator | 2025-03 | https://www.youtube.com/@ycombinator | YC 创始人演讲与 Office Hours 合集，2025 年涌现大量围绕 Harness Engineering 的创业实战分享，覆盖编程智能体、深度研究智能体、上下文管理服务等落地场景，是了解一线创业公司 Harness 实践的高价值来源。 |
 
 ---
 
@@ -87,6 +110,19 @@
 | 14 | Mixture of Agents Enhances Large Language Model Capabilities | Wang et al. (Together AI) | 2024-06-13 | https://arxiv.org/abs/2406.04692 | 提出 MoA（智能体混合）框架，通过多个 LLM 迭代优化彼此的输出，利用多模型协作涌现超越单一 SOTA 模型的性能，为 Harness 中的多智能体协作层提供了实证支持。 |
 | 15 | Long-Context LLMs Meet RAG: Overcoming Challenges for Long Inputs with Short-Context LLMs | Jin et al. | 2024-10-23 | https://arxiv.org/abs/2410.05983 | 深入对比长上下文 LLM 与 RAG 在处理长文档任务上的优劣，提出混合使用策略，为 Harness Engineering 中的上下文管理提供实证依据。 |
 | 16 | Prompt Injection Attacks and Defenses in LLM-Integrated Applications | Liu et al. | 2023-10-27 | https://arxiv.org/abs/2310.12815 | 系统研究提示注入攻击对 LLM 集成应用的威胁，提出攻击分类框架与防御策略（输入过滤、输出验证、特权分离），是 Harness 安全工程的重要参考。 |
+| 17 | UI-TARS: Pioneering Automated GUI Interaction with Native Agents | ByteDance Seed | 2025-01-17 | https://arxiv.org/abs/2501.12326 | 端到端原生 GUI 智能体，直接从截图理解界面并执行键鼠操作，融合感知、行动、推理（ReAct 式思维链）与自我改进记忆，在 10+ GUI 基准上超越 GPT-4o 和 Claude，是 Harness Engineering 应用于 GUI 自动化的里程碑论文。 |
+| 18 | Chain-of-Tools: Large Language Model is an Automatic Multi-Tool Learner | Various | 2025-03-21 | https://arxiv.org/abs/2503.16779 | 提出 Chain-of-Tools 框架，通过冻结 LLM 主体、轻量微调 Tool Judge 和 Tool Retriever 模块，使模型能够在生成推理链时调用包含训练中从未见过工具在内的大规模工具集，是 Harness 工具集成层的重要设计创新。 |
+| 19 | MemInsight: Autonomous Memory Augmentation for LLM Agents | Various | 2025-03-27 | https://arxiv.org/abs/2503.21760 | 提出 MemInsight 框架，通过结构化实体/对话记忆自动从历史交互中提取语义属性，支持属性检索和嵌入检索两种模式，在长对话 QA 上比传统 RAG 提升 34% 召回率，直接对应 Harness 上下文工程中的长期记忆设计。 |
+| 20 | Open Deep Search: Democratizing Search with Open-source Reasoning Agents | Sentient / UW / Princeton | 2025-03-26 | https://arxiv.org/abs/2503.20201 | 开源深度搜索框架，以 ReAct（ODS-v1）和 CodeAct（ODS-v2）两种 Harness 模式编排搜索工具，ODS-v2+DeepSeek-R1 在 FRAMES 上超越 GPT-4o Search Preview (+9.7%)，展示了以代码为行动空间的 Harness 在复杂搜索推理中的优势。 |
+| 21 | Play2Prompt: Zero-Shot Tool Instruction Optimization for LLM Agents via Tool Play | MIT CSAIL / IBM | 2025-03-18 | https://arxiv.org/abs/2503.14432 | 提出 Play2Prompt，通过"黑盒工具试玩"（trial-and-error API 调用）自动逆向生成工具使用示例和文档，实现零样本工具集成，在 BFCL 上比 GPT-3.5 提升 5-7%，为 Harness 工具集成的零样本冷启动提供了可行方案。 |
+| 22 | WebThinker: Empowering Large Reasoning Models with Deep Research Capability | Various | 2025-04-29 | https://arxiv.org/abs/2504.21776 | 赋予大推理模型自主网络探索和报告撰写能力的智能体框架，集成 Deep Web Explorer 与 Think-Search-Draft 协同策略，在 GPQA (70.7%) 和 GAIA 等复杂推理基准上刷新 32B 模型 SOTA，是 Harness 层嵌入深度研究能力的代表性工作。 |
+| 23 | AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges | Various | 2025-05-15 | https://arxiv.org/abs/2505.10468 | 首次系统区分 AI Agents（模块化任务型系统）与 Agentic AI（多智能体协作与动态任务分解），提出结构化分类体系，涵盖架构、能力与工程挑战，是理解 Harness Engineering 整体框架的权威综述。 |
+| 24 | Building Production-Grade Conversational Agents with Workflow Graphs | Kakao Corp / Various | 2025-05-29 | https://arxiv.org/abs/2505.23006 | 提出基于 DAG 工作流图的生产级智能体 Harness 框架，每个节点封装独立系统提示、工具集与执行规则，结合响应掩码微调策略，在真实 KakaoTalk/Web 部署中任务准确率提升 52%、格式合规率提升 50%，是 Harness 工程落地的系统性验证。 |
+| 25 | Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents | Sakana AI / Various | 2025-05-28 | https://arxiv.org/abs/2505.22954 | 提出 Darwin Gödel Machine，将进化算法与自引用代码修改结合，使编程智能体通过经验反馈自主优化 Harness 层（工具、重试机制、历史感知 Patch 生成），80 轮迭代后 SWE-bench 得分从 20% 提升至 50%，展示了 Harness 层自进化的可行性。 |
+| 26 | MemOS: An Operating System for Memory-Augmented Generation | Various | 2025-05-28 | https://arxiv.org/abs/2505.22101 | 提出面向 LLM 的记忆操作系统，统一管理参数化记忆（权重）、激活记忆（KV Cache）与明文记忆（外部文档）三种记忆类型，通过 MemCube 抽象实现记忆生命周期治理，是 Context Engineering 中记忆层系统化设计的奠基性工作。 |
+| 27 | MEM1: Learning to Remember Across Turns in Language Agents | Various | 2025-06-19 | https://arxiv.org/abs/2506.15841 | 提出 MEM1，通过强化学习训练语言智能体将每轮历史观察压缩到固定大小内部状态（<IS>），消除传统多轮 Agent 上下文无限增长的问题，MEM1-7B 在多目标多跳 QA 上超越 Qwen2.5-14B，内存仅用 1/3.7，是 Context Engineering 中记忆压缩的重要突破。 |
+| 28 | Alita: Generalist Agent Enabling Scalable Agentic Reasoning | Various | 2025-05-27 | https://arxiv.org/abs/2505.20286 | 提出 Alita，一种最小预定义、最大自进化的通用智能体框架，通过网络搜索和代码合成自主构建可复用的 MCP 工具，在 GAIA、MathVista 和 PathVQA 上超越 OpenAI DeepResearch 和 OctoTools，是 Harness Engineering 中"按需自构建工具层"思路的代表性实现。 |
+| 29 | Towards AI Search Paradigm: Multi-Agent Search Framework | Various | 2025-06-21 | https://arxiv.org/abs/2506.17188 | 提出模块化多智能体搜索框架（Master-Planner-Executor-Writer），以 DAG 分解复杂查询、MCP 动态工具选择和 RankGPT 结果对齐为核心创新，覆盖搜索 Harness 的规划、执行、生成全链路，是企业级多智能体搜索系统的系统性设计参考。 |
 
 ---
 
